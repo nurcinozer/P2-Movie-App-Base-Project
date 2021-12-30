@@ -33,39 +33,6 @@ public class MovieSearchActivity extends AppCompatActivity {
     private ActivityMovieSearchBinding binding;
     private MovieSearchViewModel mViewModel;
     private MovieAdapter movieAdapter;
-    public HuaweiIdAuthService service;
-    private static final int REQUEST_SIGN_IN_LOGIN = 3001; // Normal Login
-
-    @Override
-    protected void onStart() {
-        HuaweiIdAuthParams authParams = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM).createParams();
-        service = HuaweiIdAuthManager.getService(MovieSearchActivity.this, authParams);
-        Task<AuthHuaweiId> task = service.silentSignIn();
-        task.addOnSuccessListener(new OnSuccessListener<AuthHuaweiId>() {
-            @Override
-            public void onSuccess(AuthHuaweiId userAccount) {
-                Toast.makeText(MovieSearchActivity.this, "Hello " + userAccount.getDisplayName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        task.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(Exception e) {
-                // The sign-in failed. Try to sign in explicitly using getSignInIntent().
-                if (e instanceof ApiException) {
-                    ApiException apiException = (ApiException)e;
-                    Log.i("SIGN-IN-FAIL", "sign failed status:" + apiException.getStatusCode());
-
-                    Intent signInIntent = service.getSignInIntent();
-                    MovieSearchActivity.this.startActivityForResult(signInIntent, REQUEST_SIGN_IN_LOGIN);
-
-                    //goToLoginActivity(); //try this if not directed to LoginActivity upon failure.
-                    //This is a method I wrote to start an intent. Nothing special. ;)
-                }
-            }
-        });
-
-        super.onStart();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

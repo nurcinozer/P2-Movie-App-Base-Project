@@ -103,9 +103,6 @@ public class MovieDetailActivity extends AppCompatActivity {
                     //UI Thread work here
                     binding.ivBackdrop.setImageBitmap(posterBitmap);
 
-                    if (posterBitmap == null) {
-                        Toast.makeText(this, "Image could not be found", Toast.LENGTH_SHORT).show();
-                    }
 
                     Button imageClassificationButton = findViewById(R.id.image_classification_btn);
                     TextView detectedClassesTv = findViewById(R.id.detected_image_class_tv);
@@ -165,6 +162,8 @@ public class MovieDetailActivity extends AppCompatActivity {
         //Score
         if (movie.getVoteAverage() != 0)
             binding.tvScore.setText(movie.getVoteAverage().toString());
+        if (TextUtils.isEmpty(movie.getBackdropPath()))
+            Toast.makeText(this, "Image could not be found", Toast.LENGTH_SHORT).show();
     }
 
     private MLImageClassificationAnalyzer createImageAnalyzer() {
