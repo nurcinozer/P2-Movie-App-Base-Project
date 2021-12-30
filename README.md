@@ -1,6 +1,12 @@
 # (Project 2) Movie App Base Project for the Development of Project 2
 
+# Nurçin Özer - 1730286
+
 ![Latest Version](https://img.shields.io/badge/latestVersion-1.0-yellow) ![Java](https://img.shields.io/badge/language-java-blue) ![Minimum SDK Version](https://img.shields.io/badge/minSDK-21-orange)
+
+## Screenshots
+I added my screenshot required images mentioned for Cloud Debugging and Push implementations, and added this folder to my root project directory.
+
 
 ## Used Technologies
 - <a href="https://developer.android.com/jetpack/guide?gclid=EAIaIQobChMItvjx8cjo8wIVpgIGAB1e7QToEAAYASAAEgLD9fD_BwE&gclsrc=aw.ds" target="_blank">MVVM Design Pattern</a>
@@ -20,12 +26,12 @@
 
 ### With SSH
 ```
-git clone git@github.com:BAU-COOP4423/P2-Movie-App-Base-Project.git
+git clone git@github.com:nurcinozer/P2-Movie-App-Base-Project.git
 ```
 
 ### With HTTPS
 ```
-git clone https://github.com/BAU-COOP4423/P2-Movie-App-Base-Project.git
+git clone https://github.com/nurcinozer/P2-Movie-App-Base-Project.git
 ```
 
 ## Utilized resources
@@ -39,4 +45,4 @@ git clone https://github.com/BAU-COOP4423/P2-Movie-App-Base-Project.git
 
 
 #### Note:
-> Do not hesitate to open an <a href="https://github.com/BAU-COOP4423/P2-Movie-App-Base-Project/issues" target="_blank">issue</a> for your questions.
+> Do not hesitate to open an <a href="https://github.com/nurcinozer/P2-Movie-App-Base-Project/issues" target="_blank">issue</a> for your questions.
