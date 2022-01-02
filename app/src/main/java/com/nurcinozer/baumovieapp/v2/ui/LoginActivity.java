@@ -84,6 +84,8 @@ public class LoginActivity extends AppCompatActivity {
     private void dealWithResultOfSignIn(AuthAccount authAccount) {
         if (authAccount.getIdToken() != null) {
             Toast.makeText(this, "idToken:" + authAccount.getIdToken(), Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(getBaseContext(), MovieSearchActivity.class);
+            startActivity(i);
         }
         else {
             Toast.makeText(this, "ID Token is not found!", Toast.LENGTH_SHORT).show();
@@ -101,8 +103,6 @@ public class LoginActivity extends AppCompatActivity {
                 AuthAccount authAccount = authAccountTask.getResult();
                 dealWithResultOfSignIn(authAccount);
                 Log.i(TAG, "onActivitResult of sigInInIntent, request code: " + REQUEST_CODE_SIGN_IN);
-                Intent i = new Intent(getBaseContext(), MovieSearchActivity.class);
-                startActivity(i);
             } else {
                 // The sign-in fails. Find the cause from the status code. For more information, please refer to Error Codes.
                 Log.e(TAG, "sign in failed : " +((ApiException)authAccountTask.getException()).getStatusCode());
