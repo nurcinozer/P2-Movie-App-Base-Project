@@ -7,10 +7,9 @@
 ## Screenshots
 I added my screenshot required images mentioned for Cloud Debugging and Push implementations, and added this folder to my root project directory.
 
-<<<<<<< HEAD
+## Notes about project
+This application gives an error when I run it in my Android Studio. It runs in HMS Cloud Debugging.
 
-=======
->>>>>>> 409745636913dfe8cacd37b3257e72d257887b06
 ## Used Technologies
 - <a href="https://developer.android.com/jetpack/guide?gclid=EAIaIQobChMItvjx8cjo8wIVpgIGAB1e7QToEAAYASAAEgLD9fD_BwE&gclsrc=aw.ds" target="_blank">MVVM Design Pattern</a>
 - <a href="https://github.com/square/retrofit" target="_blank">Retrofit-2</a>
