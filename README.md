@@ -7,6 +7,8 @@
 ## Screenshots
 I added my screenshot required images mentioned for Cloud Debugging and Push implementations, and added this folder to my root project directory.
 
+## Notes about project
+This application gives an error when I run it in my Android Studio. It runs in HMS Cloud Debugging.
 
 ## Used Technologies
 - <a href="https://developer.android.com/jetpack/guide?gclid=EAIaIQobChMItvjx8cjo8wIVpgIGAB1e7QToEAAYASAAEgLD9fD_BwE&gclsrc=aw.ds" target="_blank">MVVM Design Pattern</a>
